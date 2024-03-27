@@ -8,7 +8,12 @@ function guess() {
   //Prompt user to enter a number between 0 and 10
 
   const user_input = Number(prompt("Enter a number between 0 and 10 "));
-
+  
+  
+  if (isNaN(user_input) || user_input < 0 || user_input > 10) {
+    console.log("Please enter a valid number between 0 and 10");
+    return;
+  }
   if (user_input == guess_No) {
 
     console.log(`You answered ${user_input}. This is the correct answer`);
